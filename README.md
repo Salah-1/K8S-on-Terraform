@@ -1,5 +1,5 @@
 # Terraform constraints to prevent mis-configuration or accidental deletion.
-The question came up that “can we have storage volume that doesn’t get deleted when the node or pod get recycled”? And my answer was absolutely, just use **constraints** in the **Terraform config**. After digging the requirement boiled down to:
+The question came up that “can we have storage volume that doesn’t get deleted when the node or pod get recycled”? And my answer was absolutely, just use **constraints** in the **Terraform config**. After digging, the requirement boiled down to:
 
     1. Storage volume doesn’t get deleted upon deletion of pods or nods.
     2. All resources be created in the “US West” region.
